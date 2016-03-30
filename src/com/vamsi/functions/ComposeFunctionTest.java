@@ -118,6 +118,15 @@ public class ComposeFunctionTest {
         
         printList(byAuthorSorted.apply("John",BooksList.getBooks()));
         
+        //Newest By Tag.
+        
+        BiFunction<String,List<Book>,Optional<Book>> newestByTag = byTag.andThen(newestBook);
+        
+        //Test the Newest by Tag for Suspense
+        
+        System.out.println("Newest book in Suspense Genre --");
+        newestByTag.apply("Suspense", BooksList.getBooks()).ifPresent(ComposeFunctionTest::bookprint);
+        
     }
     
    static void printList(List<Book>booksList){
