@@ -139,7 +139,7 @@ public class ComposeFunctionTest {
    static void bookprint(Book a){
        
        
-       System.out.println(a.getTitle()+"="+a.getAuthor()+"="+a.getTag()+"="+a.getPublished().toString());
+       System.out.println(a.getTitle()+"-"+a.getAuthor()+"-"+a.getTag()+"-"+a.getPublished().toString());
        
    }
 
